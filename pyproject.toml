@@ -1,0 +1,17 @@
+[project]
+name = "yolo-detection-api"
+version = "0.1.0"
+description = "API para detección de objetos con YOLO y FastAPI."
+authors = [{ name = "Tu Nombre", email = "tu@email.com" }]
+dependencies = [
+    "fastapi>=0.110.0",
+    "uvicorn[standard]>=0.29.0",
+    "ultralytics>=8.0.0",
+    "pydantic>=2.0.0",
+    "pydantic-settings>=2.0.0",
+    "python-multipart>=0.0.9"
+]
+
+[tool.uv]
+# Esta sección es opcional pero ayuda a uv a entender el entorno.
+python = "3.10"

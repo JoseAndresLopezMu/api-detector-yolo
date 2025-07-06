@@ -1,0 +1,31 @@
+# Archivos de modelo de IA
+*.pt
+*.pth
+*.onnx
+
+# Entorno virtual
+.venv/
+venv/
+
+# Caché de Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Archivos de configuración de IDEs
+.idea/
+.vscode/
+
+# Archivos del sistema operativo
+.DS_Store
+
+# Archivo de variables de entorno
+.env
+
+# Archivos de Ultralytics
+/runs/
+/tmp/
+
+# Archivos de data
+/data/
