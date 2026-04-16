@@ -62,13 +62,8 @@ demo = gr.Interface(
         "Sube una imagen para detectar **personas** (rojo) y **coches** (azul) "
         "en tiempo real usando YOLOv10n."
     ),
-    examples=[
-        ["data/car_persons1.jpg"],
-        ["data/car_persons2.jpg"],
-        ["data/car_persons3.webp"],
-    ],
     flagging_mode="never",
 )
 
 if __name__ == "__main__":
-    demo.launch(theme=gr.themes.Soft(), allowed_paths=["data/"])
+    demo.launch(theme=gr.themes.Soft())
