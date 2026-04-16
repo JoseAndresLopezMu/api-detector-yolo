@@ -1,5 +1,7 @@
 import logging
-from fastapi import FastAPI, UploadFile, File, HTTPException, status
+
+from fastapi import FastAPI, File, HTTPException, UploadFile, status
+
 from object_detector import detector
 from schemas import DetectionResponse
 
@@ -11,8 +13,14 @@ logging.basicConfig(
 app = FastAPI(
     title="API de Detección de Objetos con YOLOv10",
     description="Una API para detectar objetos (personas y coches) en imágenes usando YOLOv10.",
-    version="1.0.0"
+    version="1.0.0",
 )
+
+
+@app.get("/health", tags=["ops"])
+async def health_check():
+    """Liveness probe — returns 200 when the service is ready."""
+    return {"status": "ok", "version": app.version}
 
 @app.post("/detectar/", response_model=DetectionResponse)
 async def detectar_objetos(image_file: UploadFile = File(...)):
@@ -26,9 +34,9 @@ async def detectar_objetos(image_file: UploadFile = File(...)):
     try:
         logging.info(f"Procesando el archivo: {image_file.filename}")
         contents = await image_file.read()
-        
+
         detections = detector.detect(contents)
-        
+
         logging.info(f"Detección completada. Se encontraron {len(detections)} objetos.")
         return {"detecciones": detections}
 

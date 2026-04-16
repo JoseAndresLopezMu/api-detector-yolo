@@ -11,7 +11,7 @@ class ObjectDetector:
     def detect(self, image_bytes: bytes) -> list[Detection]:
         image = Image.open(io.BytesIO(image_bytes))
         results = self.model(image)
-        
+
         detections = []
         for result in results:
             boxes = result.boxes
