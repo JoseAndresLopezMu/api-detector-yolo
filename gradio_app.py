@@ -67,9 +67,8 @@ demo = gr.Interface(
         ["data/car_persons2.jpg"],
         ["data/car_persons3.webp"],
     ],
-    allow_flagging="never",
-    theme=gr.themes.Soft(),
+    flagging_mode="never",
 )
 
 if __name__ == "__main__":
-    demo.launch()
+    demo.launch(theme=gr.themes.Soft())
