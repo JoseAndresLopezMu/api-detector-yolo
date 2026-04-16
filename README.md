@@ -1,6 +1,11 @@
 
 # API de Detección de Objetos con YOLOv10 y Docker
 
+![CI](https://github.com/JoseAndresLopezMu/api-detector-yolo/actions/workflows/ci.yml/badge.svg)
+![Python](https://img.shields.io/badge/python-3.10-blue)
+![FastAPI](https://img.shields.io/badge/FastAPI-0.110+-green)
+![Docker](https://img.shields.io/badge/docker-ready-blue)
+
 Este proyecto proporciona una API RESTful construida con FastAPI y empaquetada con Docker para realizar la detección de objetos (personas y coches) en imágenes utilizando el modelo YOLOv10.
 
 ## Características
