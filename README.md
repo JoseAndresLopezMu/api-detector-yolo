@@ -1,3 +1,12 @@
+---
+title: Yolo Detector
+emoji: 🔍
+colorFrom: red
+colorTo: blue
+sdk: gradio
+app_file: gradio_app.py
+pinned: false
+---
 
 # API de Detección de Objetos con YOLOv10 y Docker
 
